@@ -38,7 +38,7 @@ html {
                 position: absolute;
                 bottom: 0;
                 left: 50%;
-                transform: translate(-50%, 0);
+                transform: translate(-50%, -6.4vw);
             }
         }
 
@@ -74,7 +74,7 @@ html {
                 border-radius: 12px;
                 background-color: $white;
 
-                p:nth-of-type(1) {
+                .lOrder-line_p {
                     width: fit-content;
                     border-radius: 0 0 12px 12px;
                     background-color: $green;
@@ -96,7 +96,7 @@ html {
                     text-align: center;
                 }
 
-                p:nth-of-type(2) {
+                p {
                     width: calc(100% - 32px);
                     margin: 12px auto 0 auto;
                 }
@@ -261,5 +261,143 @@ html {
                 margin: 40px auto 0 auto;
             }
         }
+
+        .lOrder-question {
+            background-color: $beige;
+            padding-bottom: 80px;
+            margin-top: 80px;
+
+            h2 {
+                padding-top: 80px;
+                @include h2;
+            }
+
+            article {
+                width: calc(100% - 32px);
+                margin: 40px auto 0 auto;
+
+                h3 {
+                    border-left: solid 4px $red;
+                    padding-left: 12px;
+                    @include font-ll;
+                }
+
+                .lOrder-con {
+                    width: 100%;
+                    border-radius: 12px;
+                    background-color: $white;
+                    padding-bottom: 16px;
+                    margin: 20px auto 0 auto;
+
+                    h4 {
+                        width: calc(100% - 48px);
+                        padding-top: 16px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        @include font-m;
+                        font-weight: bold;
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                            margin-left: 10px;
+                            transform: translateY(1px);
+                            transition-duration: .3s;
+                        }
+                    }
+
+                    p {
+                        width: calc(100% - 48px);
+                        max-height: 0;
+                        margin: 8px auto 0 auto;
+                        overflow: hidden;
+                        opacity: 0;
+                        transition-duration: .3s;
+                    }
+                }
+
+                .lOrder-acd-on {
+
+                    h4 {
+                        color: $grey;
+
+                        img {
+                            transform: translateY(1px) rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .lOrder-bottom-cta {
+            height: 105vw;
+            padding-top: 60px;
+            position: relative;
+
+            .lOrder-bgImg {
+                width: 100%;
+                height: 100%;
+                @include absolute;
+                z-index: -1;
+            }
+
+            .lOrder-con {
+                width: calc(100% - 32px);
+                border-radius: 12px;
+                background-color: $white-a1;
+                padding-bottom: 24px;
+                margin: 0 auto;
+
+                p {
+                    padding-top: 24px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                a {
+                    width: calc(100% - 32px);
+                    height: 48px;
+                    border: solid 1px $brown;
+                    border-radius: 40px;
+                    background-color: $brown;
+                    margin: 16px auto 0 auto;
+                    @include center;
+                    @include font-m;
+                    font-weight: bold;
+                    color: $white;
+            
+                    &:active {
+                        background-color: $white;
+                        color: $brown;
+                
+                        img:nth-of-type(1) {
+                            opacity: 0;
+                        }    
+                    }
+            
+                    div {
+                        width: 16px;
+                        height: 16px;
+                        margin-left: 10px;
+                        position: relative;
+                        transform: translateY(1px);
+            
+                        img:nth-of-type(1) {
+                            @include absolute;
+                            z-index: 1;
+                        }
+                
+                        img:nth-of-type(2) {
+                            @include absolute;
+                            z-index: 0;
+                        }    
+                    }
+                }
+            }
+        }
     }
 }
+
+@import './responsive/style';
