@@ -85,6 +85,7 @@ html {
                     margin: 0 auto;
                     font-weight: 600;
                     color: $white;
+                    line-height: 150%;
                     transform: translateX(0);
                 }
 
@@ -148,13 +149,15 @@ html {
                         margin-left: 24px;;
                         font-size: 24px;
                         font-weight: 600;
+                        line-height: 150%;
 
                         span {
                             display: block;
-                            margin-top: 10px;
+                            margin-top: 4px;
                             @include font-s;
-                            font-weight: 300;
+                            font-weight: 400;
                             color: $grey;
+                            line-height: 150%;
                         }
                     }
                 }
@@ -174,10 +177,12 @@ html {
                     @include font-ss;
                     font-weight: 600;
                     color: $mossGreen;
+                    line-height: 150%;
                 }
 
                 p:nth-of-type(2) {
                     margin-top: 12px;
+                    line-height: 150%;
                     text-align: center;
                 }
             }
@@ -240,6 +245,7 @@ html {
                             @include font-l;
                             font-weight: 600;    
                             color: $green;
+                            line-height: 150%;
                         }
                     }    
 
@@ -262,6 +268,10 @@ html {
                     img {
                         width: 53vw;
                         height: 53vw;
+                    }
+
+                    p {
+                        line-height: 150%;
                     }
                 }
             }
@@ -321,6 +331,7 @@ html {
                         width: calc(100% - 48px);
                         max-height: 0;
                         margin: 0 auto;
+                        line-height: 150%;
                         overflow: hidden;
                         opacity: 0;
                         transition-duration: .3s;
@@ -331,6 +342,7 @@ html {
 
                     h4 {
                         color: $grey;
+                        line-height: 150%;
 
                         img {
                             transform: translateY(1px) rotate(90deg);
@@ -339,6 +351,7 @@ html {
 
                     p {
                         margin: 8px auto 0 auto;
+                        line-height: 150%;
                     }
                 }
             }
@@ -366,6 +379,7 @@ html {
                 p {
                     padding-top: 24px;
                     margin: 0 auto;
+                    line-height: 150%;
                     text-align: center;
                 }
 

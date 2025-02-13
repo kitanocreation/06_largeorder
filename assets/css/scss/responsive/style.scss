@@ -164,6 +164,7 @@
                         width: calc((100% - 64px) / 5);
                         margin: 0 0 0 16px;
                         flex-direction: column;
+                        justify-content: initial;
 
                         .lOrder-con:nth-of-type(1) {
                             width: calc(100% - 20px);

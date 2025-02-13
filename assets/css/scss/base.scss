@@ -73,33 +73,40 @@ br {
 
 @mixin font-ss {
     font-size: 12px;
+    line-height: 150%;
 }
 
 @mixin font-s {
     font-size: 14px;
+    line-height: 150%;
 }
 
 @mixin font-m {
     font-size: 16px;
+    line-height: 150%;
 }
 
 @mixin font-l {
     font-size: 18px;
+    line-height: 150%;
 }
 
 @mixin font-ll {
     font-size: 20px;
     font-weight: 600;
+    line-height: 150%;
 }
 
 @mixin font-lll {
     font-size: 28px;
     font-weight: 600;
+    line-height: 150%;
 }
 
 @mixin font-llll {
     font-size: 32px;
     font-weight: 600;
+    line-height: 150%;
 }
 
 @mixin cta {
@@ -109,6 +116,7 @@ br {
         @include center;
         @include font-s;
         color: $grey;
+        line-height: 150%;
 
         span {
             width: 1px;
@@ -136,6 +144,7 @@ br {
         @include font-m;
         font-weight: 600;
         color: $white;
+        line-height: 150%;
 
         &:active {
             background-color: $white;
@@ -171,5 +180,6 @@ br {
 
 @mixin h2 {
     @include font-lll;
+    line-height: 150%;
     text-align: center;
 }
