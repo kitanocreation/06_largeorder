@@ -1,0 +1,86 @@
+@import '../base';
+
+@media screen and (min-width: 768px) {
+
+    .lOrder-sp {
+        display: none;
+    }
+    
+    .lOrder-pc {
+        display: block;
+    }
+    
+    * {
+        font-size: 16px;
+    }    
+}
+
+@mixin font-ss-pc {
+    font-size: 14px;
+}
+
+@mixin font-s-pc {
+    font-size: 16px;
+}
+
+@mixin font-m-pc {
+    font-size: 18px;
+}
+
+@mixin font-l-pc {
+    font-size: 20px;
+}
+
+@mixin font-ll-pc {
+    font-size: 24px;
+}
+
+@mixin font-lll-pc {
+    font-size: 32px;
+}
+
+@mixin font-llll-pc {
+    font-size: 40px;
+}
+
+@mixin cta-pc {
+    width: 31vw;
+
+    p {
+        @include font-s-pc;
+
+        span {
+            height: 20px;
+        }
+    }
+
+    a {
+        height: 51px;
+        @include font-m-pc;
+        transition-duration: .3s;
+
+        &:hover {
+            background-color: $white;
+            color: $brown;
+
+            div {
+
+                img:nth-of-type(1) {
+                    opacity: 0;
+                }        
+            }
+        }
+
+        div {
+
+            img {
+                transition-duration: .3s
+            }
+        }
+    }
+}
+
+@mixin h2-pc {
+    @include font-lll-pc;
+    text-align: center;
+}
