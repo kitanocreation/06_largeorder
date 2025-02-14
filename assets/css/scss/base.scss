@@ -1,0 +1,185 @@
+@charset 'UTF-8';
+
+@import './reset';
+
+$notoSansJp: "Noto Sans JP", serif;
+
+$white: #FFFFFF;
+$white-a1: rgba(255, 255, 255, .7);
+$white-a2: rgba(255, 255, 255, .5);
+$white-a3: rgba(255, 255, 255, .25);
+$black: #414143;
+$black-a1: rgba(51, 51, 51, .75);
+$black-a2: rgba(51, 51, 51, .5);
+$black-a3: rgba(51, 51, 51, .25);
+$grey: #757578;
+$brown: #4B0718;
+$beige: #F4F3EB;
+$red: #B8193F;
+$green: #A1981F;
+$mossGreen: #4E4903;
+
+.lOrder-pc {
+    display: none;
+}
+
+* {
+    font-family: $notoSansJp;
+    font-size: 14px;
+    font-weight: 400;
+    color: $black;
+    letter-spacing: .04em;
+    line-height: 150%;
+}
+
+html, body {
+    width: 100vw;
+}
+
+.lOder-fv, main, section {
+    width: 100%;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+br {
+    white-space: nowrap;
+}
+
+@mixin bg {
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin font-ss {
+    font-size: 12px;
+    line-height: 150%;
+}
+
+@mixin font-s {
+    font-size: 14px;
+    line-height: 150%;
+}
+
+@mixin font-m {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+@mixin font-l {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+@mixin font-ll {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+@mixin font-lll {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+@mixin font-llll {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+@mixin cta {
+    width: 87vw;
+
+    p {
+        @include center;
+        @include font-s;
+        color: $black;
+        line-height: 150%;
+
+        span {
+            width: 1px;
+            height: 16.5px;
+            background-color: $black;
+        }
+
+        span:nth-of-type(1) {
+            transform: translate(-6px, 1px) rotate(-30deg);
+        }
+
+        span:nth-of-type(2) {
+            transform: translate(6px, 1px) rotate(30deg);
+        }
+    }
+
+    a {
+        width: 100%;
+        height: 48px;
+        border: solid 1px $brown;
+        border-radius: 40px;
+        background-color: $brown;
+        margin-top: 8px;
+        @include center;
+        @include font-m;
+        font-weight: 600;
+        color: $white;
+        line-height: 150%;
+
+        &:active {
+            background-color: $white;
+            color: $brown;
+
+            div {
+
+                img:nth-of-type(1) {
+                    opacity: 0;
+                }        
+            }
+        }
+
+        div {
+            width: 16px;
+            height: 16px;
+            margin-left: 10px;
+            position: relative;
+            transform: translateY(1px);
+
+            img:nth-of-type(1) {
+                @include absolute;
+                z-index: 1;
+            }
+    
+            img:nth-of-type(2) {
+                @include absolute;
+                z-index: 0;
+            }    
+        }
+    }
+}
+
+@mixin h2 {
+    @include font-lll;
+    line-height: 150%;
+    text-align: center;
+}
